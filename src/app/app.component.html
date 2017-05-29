@@ -1,0 +1,16 @@
+<div class="block">
+    <h1>Loklak Home Page</h1>
+    <h5>{{title}}</h5>
+    <div class="post">
+        <textarea [(ngModel)]="newTweet" placeholder="What's happening?" class="addstory"></textarea>
+        <br>
+        <button (click)="addTweet()">Tweet</button>
+    </div>
+    <div class="stream-container">
+        <div class="tweet" *ngFor="let i of tweets; let id = index">
+            <p>{{i}}</p>
+            <span (click)="removeTweet(id)">x</span>
+        </div>
+
+    </div>
+</div>

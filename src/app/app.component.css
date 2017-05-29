@@ -1,0 +1,96 @@
+.block {
+    width: 800px;
+    border: 1px solid #E8F5FD;
+    border-bottom: 0px;
+    text-align: center;
+    margin: 0 auto;
+    /*margin-top: 20px;*/
+    padding: 50px;
+    font-family: monospace;
+    background-color: #F5F8FA;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #0084B4;
+    margin-top: 0px;
+}
+
+.post {
+    width: 600px;
+    height: 180px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #E8F5FD;
+    border-radius: 5px;
+}
+
+.addstory {
+    width: 80%;
+    height: 100px;
+    font-size: 15px;
+    margin-top: 20px;
+    resize: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border-color: #fff;
+    outline: none;
+}
+
+.post button {
+    height: 30px;
+    width: 75px;
+    margin-top: 5px;
+    position: relative;
+    left: 200px;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    display: inline-block;
+    border-radius: 6px;
+    outline: none;
+}
+
+.post button:active {
+    border: 0.2em solid #fff;
+    opacity: 0.6;
+}
+
+.stream-container {
+    width: 600px;
+    border-bottom: 1px solid #E8F5FD;
+    background-color: white;
+    padding: 10px 0px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.tweet {
+    border: 1px solid;
+    border-color: #E8F5FD;
+    border-radius: 3px;
+}
+
+p {
+    text-align: left;
+    text-indent: 25px;
+    display: inline-block;
+    width: 500px;
+    /*text-align: left;*/
+    /*margin-left: 50px;*/
+    /*background-color: #0084B4;*/
+}
+
+span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    /*background-color: #0084B4;*/
+    cursor: pointer;
+    /*position: relative;*/
+    /*margin-right: 10px;*/
+    -webkit-text-fill-color: #0084B4;
+}

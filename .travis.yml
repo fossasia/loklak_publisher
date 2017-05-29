@@ -1,0 +1,44 @@
+language: node_js
+
+notifications:
+  email: never
+
+os: linux
+node_js: '7.10.0'
+sudo: required
+env: DISPLAY=':99.0'
+dist: trusty
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+ 
+before_script:
+  - sh -e /etc/init.d/xvfb start
+
+before_install:
+  # adds the decryption step for client-secret.json
+- openssl aes-256-cbc -K $encrypted_3262f85e348e_key -iv $encrypted_3262f85e348e_iv
+  -in client-secret.json.enc -out client-secret.json -d
+
+install:
+- npm install
+
+script:
+  # karma unit test
+- ng test --watch false
+  # e2e test
+- ng e2e --watch false
+  # check format
+- ng lint
+  # build
+- ng build
+
+# deploy to Google Cloud
+deploy:
+  provider: gae
+  keyfile: client-secret.json
+  project: loklak-167617
+  docker_build: local
