@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home.component';
+import { UserService } from '../_services/index';
+import { AlertService, AuthenticationService } from '../_services/index';
+import { HttpModule } from '@angular/http';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -8,7 +12,17 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [ HomeComponent ],
+      imports: [
+        HttpModule,
+        FormsModule,
+        RouterTestingModule
+      ],
+      providers: [
+        UserService,
+        AlertService,
+        AuthenticationService
+      ]
     })
     .compileComponents();
   }));

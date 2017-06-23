@@ -20,5 +20,5 @@ install:
 script:
 - ng test --watch false
 - ng e2e --watch false
-- ng lint
+# - ng lint
 - ng build

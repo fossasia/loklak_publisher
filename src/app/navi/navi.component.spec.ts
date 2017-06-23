@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NaviComponent } from './navi.component';
+import { AlertService, AuthenticationService } from '../_services/index';
+import { RouterTestingModule } from '@angular/router/testing';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 describe('NaviComponent', () => {
   let component: NaviComponent;
@@ -8,7 +12,16 @@ describe('NaviComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NaviComponent ]
+      declarations: [ NaviComponent ],
+      imports: [
+        HttpModule,
+        FormsModule,
+        RouterTestingModule
+      ],
+      providers: [
+        AlertService,
+        AuthenticationService
+      ]
     })
     .compileComponents();
   }));

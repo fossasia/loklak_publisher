@@ -10,9 +10,14 @@ import { UserService } from '../_services/index';
 export class HomeComponent implements OnInit {
 
     currentUser: any;
+    message: string;
+
 
     constructor(private userService: UserService) {
+      if(this.currentUser != null) {
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      }
+      this.currentUser = "Welcome to loklak publisher";
     }
         
     tweets = ['amazing!'];

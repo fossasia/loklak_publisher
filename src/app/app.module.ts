@@ -35,8 +35,6 @@ import { NaviComponent } from './navi/index';
         AlertService,
         AuthenticationService,
         UserService,
-
-
         BaseRequestOptions
   ],
   bootstrap: [AppComponent]
