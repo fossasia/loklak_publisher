@@ -1,0 +1,171 @@
+.tooltip {
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
+    
+    &.top {
+        margin-top: -11px;
+        padding: 0;
+    }
+    &.top .tooltip-inner:after {
+        border-top: 11px solid $white-color;
+        border-left: 11px solid rgba(0, 0, 0, 0);
+        border-right: 11px solid rgba(0, 0, 0, 0);
+        bottom: -10px;
+    }
+    &.top .tooltip-inner:before {
+        border-top: 11px solid rgba(0, 0, 0, 0.2);
+        border-left: 11px solid rgba(0, 0, 0, 0);
+        border-right: 11px solid rgba(0, 0, 0, 0);
+        bottom: -11px;
+    }
+    &.bottom {
+        margin-top: 11px;
+        padding: 0;
+    }
+    &.bottom .tooltip-inner:after {
+        border-bottom: 11px solid $white-color;
+        border-left: 11px solid rgba(0, 0, 0, 0);
+        border-right: 11px solid rgba(0, 0, 0, 0);
+        top: -10px;
+    }
+    &.bottom .tooltip-inner:before {
+        border-bottom: 11px solid rgba(0, 0, 0, 0.2);
+        border-left: 11px solid rgba(0, 0, 0, 0);
+        border-right: 11px solid rgba(0, 0, 0, 0);
+        top: -11px;
+    }
+    &.left{
+        margin-left: -11px;
+        padding: 0;
+    }
+    &.left .tooltip-inner:after {
+        border-left: 11px solid $white-color;
+        border-top: 11px solid rgba(0, 0, 0, 0);
+        border-bottom: 11px solid rgba(0, 0, 0, 0);
+        right: -10px;
+        left: auto;
+        margin-left: 0;
+    }
+    &.left .tooltip-inner:before {
+        border-left: 11px solid rgba(0, 0, 0, 0.2);
+        border-top: 11px solid rgba(0, 0, 0, 0);
+        border-bottom: 11px solid rgba(0, 0, 0, 0);
+        right: -11px;
+        left: auto;
+        margin-left: 0;
+    }
+    &.right{
+        margin-left: 11px;
+        padding: 0;
+    }
+    &.right .tooltip-inner:after {
+        border-right: 11px solid $white-color;
+        border-top: 11px solid rgba(0, 0, 0, 0);
+        border-bottom: 11px solid rgba(0, 0, 0, 0);
+        left: -10px;
+        top: 10px;
+        margin-left: 0;
+    }
+    &.right .tooltip-inner:before {
+        border-right: 11px solid rgba(0, 0, 0, 0.2);
+        border-top: 11px solid rgba(0, 0, 0, 0);
+        border-bottom: 11px solid rgba(0, 0, 0, 0);
+        left: -11px;
+        top: 11px;
+        margin-left: 0;
+    }
+}
+
+.tooltip-arrow{
+    display: none;
+    opacity: 0;
+}
+.tooltip-inner {
+    background-color: $white-color;
+    border-radius: $border-radius-extreme;
+    box-shadow: 0 1px 13px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(115, 71, 38, 0.23);
+    color: $default-color;
+    max-width: 200px;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.tooltip-inner:after {
+    content: "";
+    display: inline-block;
+    left: 100%;
+    margin-left: -60%;
+    position: absolute;
+}
+.tooltip-inner:before {
+    content: "";
+    display: inline-block;
+    left: 100%;
+    margin-left: -60%;
+    position: absolute;
+}
+
+
+.popover{
+    border: 0;
+    border-radius: $border-radius-base;
+    background-color: $bg-danger;
+    color: $white-color;
+    font-weight: $font-weight-normal;
+    padding: 0;
+    z-index: 1031;
+    @include box-shadow(none);
+}
+.popover-title{
+    background-color: $bg-danger;
+    border-bottom: 0 none;
+    font-size: $font-paragraph;
+    font-weight: normal;
+    line-height: 22px;
+    padding: 15px 15px 8px 15px;
+    margin: 0;
+    color: $danger-states-color;
+    text-align: center;
+    border-radius: $border-radius-base $border-radius-base 0 0;
+}
+.popover-content{
+    padding: 10px 15px 20px 15px;
+    text-align: center;
+}
+.popover .arrow{
+    border: 0;
+}
+.popover.top .arrow{
+    margin-left: 0;
+}
+.popover.bottom .arrow:after{
+    border-bottom-color: $bg-danger; 
+}
+.popover-filter{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #000000;
+    @include opacity(0);
+    visibility: hidden;
+    
+    transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+}
+.popover-filter.in{
+     visibility:visible;
+     @include opacity(0.2);
+     transition-delay: 0s;
+}
+.popover.left > .arrow::after{
+    border-left-color: $bg-danger;
+    bottom: -20px;
+}
+.popover.top > .arrow::after{
+    border-top-color: $bg-danger;
+}
+.popover.right > .arrow::after{
+    border-right-color: $bg-danger;
+}
