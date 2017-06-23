@@ -1,0 +1,59 @@
+.carousel-control{
+    background-color: $danger-color;
+    border-radius: 50%;
+    opacity: 1;
+    text-shadow: none;
+    
+    &:hover,
+    &:focus{
+        opacity: 1;
+        background-color: $danger-states-color;
+    }
+}
+
+.carousel-control.left{
+    height: 30px;
+    top: 50%;
+    width: 30px;
+    left: 8%;
+}
+.carousel-control.right{
+    height: 30px;
+    right: 8%;
+    top: 50%;
+    width: 30px;
+}
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .fa, .carousel-control .fa {
+    display: inline-block;
+    z-index: 5;
+}
+.carousel-control .fa{
+    font-size: 26px;
+    margin: 2px;
+}
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
+.carousel-inner{
+    background-color: #d6d2cc;
+}
+.carousel-inner > .item {
+    padding: 50px;
+}
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img{
+    border-radius: $border-radius-extreme;
+    box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+    margin-left: 25%;
+    max-width: 50%;
+}
+.carousel-indicators{
+    bottom: 0px;
+}
+.carousel-indicators > li{
+    background-color: $white-color;
+    border: 0 none;
+}
+.carousel-indicators .active{
+    background-color: $danger-color;
+}

@@ -14,9 +14,6 @@ addons:
     - google-chrome-stable
 before_script:
 - sh -e /etc/init.d/xvfb start
-before_install:
-- openssl aes-256-cbc -K $encrypted_f6154c77f5d8_key -iv $encrypted_f6154c77f5d8_iv
-  -in client-secret.json.enc -out client-secret.json -d
 
 install:
 - npm install
@@ -25,8 +22,3 @@ script:
 - ng e2e --watch false
 - ng lint
 - ng build
-deploy:
-  provider: gae
-  keyfile: client-secret.json
-  project: loklak-167617
-  docker_build: local

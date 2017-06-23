@@ -1,0 +1,179 @@
+.landing-alert {
+  margin-bottom: 0;
+}
+
+.landing-header {
+  background-size: cover;
+  min-height: 570px;
+}
+
+.landing-header .motto {
+  padding-top: 8%;
+  text-align: left;
+  z-index: 3;
+}
+
+.landing-section {
+  padding: 100px 0;
+}
+
+.landing-section .btn-simple {
+  padding: 0;
+}
+
+.landing-section .column {
+  padding: 0 75px 0 25px;
+}
+
+.team-player .img-circle, .team-player .img-thumbnail {
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+}
+
+.contact-form {
+  margin-top: 30px;
+}
+
+.contact-form label {
+  margin-top: 15px;
+}
+
+.contact-form .btn {
+  margin-top: 30px;
+}
+
+.navbar-relative {
+  position: relative;
+  z-index: 2;
+}
+
+#register-navbar a {
+  color: #FFF;
+}
+
+.register-background {
+  background-image: url("../paper_img/landscape.jpg");
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.register-background .filter-black::after {
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.register-background .container {
+  margin-top: 11%;
+  position: relative;
+  z-index: 3;
+}
+
+.register-footer {
+  bottom: 20px;
+  color: #fff;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+}
+
+.register-footer .fa-heart {
+  color: #EB5E28;
+}
+
+.register-card {
+  background-color: #FF8F5E;
+  border-radius: 8px;
+  color: #fff;
+  max-width: 350px;
+  margin: 20px 0 70px;
+  min-height: 400px;
+  padding: 30px;
+}
+
+.register-card label {
+  margin-top: 15px;
+}
+
+.register-card .title {
+  color: #B33C12;
+  text-align: center;
+}
+
+.register-card .btn {
+  margin-top: 30px;
+}
+
+.register-card .forgot {
+  text-align: center;
+}
+
+.profile-background {
+  background-image: url("../paper_img/lamp.jpg");
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+  position: relative;
+  margin-top: -110px;
+}
+
+.profile-background .filter-black::after {
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+  display: block;
+  height: 300px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.profile-content {
+  position: relative;
+}
+
+.owner .avatar {
+  margin-top: -85px;
+  padding: 15px;
+  position: relative;
+  z-index: 3;
+}
+
+.owner .name h4 {
+  margin-top: 10px;
+}
+
+.profile-tabs {
+  margin: 50px 0;
+  min-height: 300px;
+}
+
+#following h3 {
+  margin: 40px 0;
+}
+
+.follows .unfollow {
+  width: 15px;
+}
+
+.follows hr {
+  margin-top: 10px;
+}
+
+.alert h5 {
+  margin-bottom: 10px;
+}

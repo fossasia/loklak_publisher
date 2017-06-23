@@ -1,14 +1,16 @@
-import { LoklakMessagePublisherPage } from './app.po';
+import { LoklakPublisherPage } from './app.po';
 
-describe('loklak-message-publisher App', () => {
-  let page: LoklakMessagePublisherPage;
+describe('loklak-publisher App', () => {
+  let page: LoklakPublisherPage;
 
   beforeEach(() => {
-    page = new LoklakMessagePublisherPage();
+    page = new LoklakPublisherPage();
   });
 
-  it('should display message saying Loklak Home Page', () => {
+  it('should display welcome message', done => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Loklak Home Page');
+    page.getParagraphText()
+      .then(msg => expect(msg).toEqual('Welcome to app!!'))
+      .then(done, done.fail);
   });
 });
