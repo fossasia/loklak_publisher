@@ -1,0 +1,25 @@
+<div class="fs col-md-12">
+    <div class="col-md-12">
+        <h3 class="text-center">Hi {{ currentUser.message }}!</h3>
+        <div class="block">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <textarea [(ngModel)]="newTweet" placeholder="What's happening?" class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1 col-md-offset-9">
+                    <button class="btn btn-primary" (click)=" addTweet() ">Tweet</button>
+                </div>
+            </div>
+            <div class="stream-container col-md-8 col-md-offset-2">
+                <div class="form-group" *ngFor="let i of tweets; let id=index ">
+                    <div class="row">
+                        <p>{{i}}</p>
+                        <button class="btn btn-danger" (click)="removeTweet(id)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

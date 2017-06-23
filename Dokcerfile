@@ -9,10 +9,10 @@ RUN apk update && apk upgrade && \
     npm install -g @angular/cli@1.1.0-rc.2
 
 # add source code to images
-ADD . /loklak-message-publisher
+ADD . /loklak-publisher
 
 # switch working directory
-WORKDIR /loklak-message-publisher
+WORKDIR /loklak-publisher
 
 # install dependencies
 RUN npm install

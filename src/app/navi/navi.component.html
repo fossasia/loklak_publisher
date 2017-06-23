@@ -1,0 +1,85 @@
+<nav class=" navbar-default navbar-small" role="navigation">
+    <div class="container-fluid ">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" routerLink="/">Loklak publisher</a>
+        </div>
+
+        <!-- login navi -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" *ngIf="showLoginNav">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a routerLink='/login' (click)="logout()">Log out</a></li>
+            </ul>
+        </div>
+        <!--login navi -->
+
+        <!-- normal navi -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" *ngIf="showNormalNav">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a routerLink='/register'>Register</a></li>
+                <!-- login dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                    <ul id="login-dp" class="dropdown-menu">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+                                        <div class="form-group col-xs-12" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+                                            <br>
+                                            <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                            <input type="text" class="form-control" name="username" placeholder="Email address" [(ngModel)]="model.username" #username="ngModel" required />
+                                            <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+                                        </div>
+                                        <div class="form-group col-xs-12" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                            <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" placeholder="Password" required />
+                                            <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+                                            <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                        </div>
+
+                                        <div class="form-group col-md-9">
+                                            <label class="checkbox checkbox-red" for="checkbox2">
+                                                <input type="checkbox" value="" id="checkbox2" data-toggle="checkbox" unchecked> Remember me
+                                                </label>
+                                        </div>
+                                        <div class="row col-md-10">
+                                            <div class="form-group col-md-8">
+                                                <button type="submit" class="btn btn-danger btn-fill btn-block">Sign In</button>
+                                            </div>
+
+                                            <div class="social-buttons col-md-3">
+                                                <a href="#" class="btn btn-info btn-fill"><i class="fa fa-twitter"></i>Twitter</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="bottom text-center">
+                                    New here ? <a routerLink='/register'><b>Join Us</b></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!-- login dropdown -->
+                <!--<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">More<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>-->
+            </ul>
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
